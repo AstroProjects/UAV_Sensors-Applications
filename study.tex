@@ -1,0 +1,60 @@
+%
+\typeout{}\typeout{If latex fails to find aiaa-tc, read the README file!}
+
+\documentclass[]{aiaa-tc}% insert '[draft]' option to show overfull boxes
+\usepackage{tabularx}
+\usepackage{blindtext}
+
+
+ \title{Conceptual design of a UAV for Mars}
+
+ \author{
+  Hector Anadón%
+    \thanks{Aerospace engineering student, ESEIAAT.}
+  \ and Pol Fontanes\thanksibid{1}\\
+ }
+
+ % Data used by 'handcarry' option if invoked
+ %\AIAApapernumber{YEAR-NUMBER}
+ %\AIAAconference{Conference Name, Date, and Location}
+ %\AIAAcopyright{\AIAAcopyrightD{YEAR}}
+
+ % Define commands to assure consistent treatment throughout document
+ \newcommand{\eqnref}[1]{(\ref{#1})}
+ \newcommand{\class}[1]{\texttt{#1}}
+ \newcommand{\package}[1]{\texttt{#1}}
+ \newcommand{\file}[1]{\texttt{#1}}
+ \newcommand{\BibTeX}{\textsc{Bib}\TeX}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+	First approach to Mars UAV conceptual design. Previous studies suggest that this kind of aerial machines could perform well on Mars. Background papers about this subject will be studied in order to present a UAV conceptual design.
+\end{abstract}
+
+\section*{Nomenclature}
+
+\begin{tabbing}
+  XXX \= \kill% this line sets tab stop
+  $x$ \> Variable value vector \\
+  $F$ \> Force, N \\
+  $m$ \> Mass, kg \\
+  $\Delta x$ \> Variable displacement vector \\
+  $\alpha$ \> Acceleration, m/s\textsuperscript{2} \\
+  $\rho$ \> Density, kg/m\textsuperscript{3} \\ [5pt]
+  \textit{Subscript}\\
+  $i$ \> Variable number \\
+ \end{tabbing}
+
+\input{./parts/background}
+\input{./parts/proposal}
+\input{./parts/UAV_specifications}
+
+
+\newpage
+\bibliographystyle{unsrt}
+\bibliography{UAV_sensors}
+
+\end{document}
